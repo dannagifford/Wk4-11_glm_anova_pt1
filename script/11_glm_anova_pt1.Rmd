@@ -113,7 +113,8 @@ my_data_tidied %>%
   geom_jitter(width = .1) +
   guides(colour = FALSE) +
   stat_summary(fun.data = "mean_cl_boot", colour = "black") +
-  theme(text = element_text(size = 13))
+  theme(text = element_text(size = 13)) +
+  theme_minimal()
 ```
 
 We have built a visualisation where we have plotted the raw data points using the `geom_jitter()` function, and the shape of the distribution for each condition using the `geom_violin()` function. We have also added some summary data in the form of the Mean and Confidence Intervals around the Mean using the `stat_summary()` function.
@@ -158,11 +159,79 @@ In other words, drinking some coffee improves motor performance relative to drin
 
 [video 3]
 
-```{r}
-rm_data <- read_csv("data/rm_data.csv")
+Now it's your chance to work with the data I examined in the video above. Let’s imagine we have an experiment where we asked 32 participants to learn how to pronounce words of differing levels of complexity - Very Easy, Easy, Hard, and Very Hard. They were presented with these words in an initial exposure phase. After a 30 minute break we tested participants by asking them to say the words out loud when they appeared on a computer screen. We recorded their times in seconds. We want to know whether there is a difference in their response times for each level of word complexity. 
+
+## Reading in our Data
+
+First we read in the data.
+```{r, message=FALSE}
+rm_data <- read_csv("https://raw.githubusercontent.com/ajstewartlang/11_glm_anova_pt1/master/data/rm_data.csv")
+head(rm_data)
 ```
 
+We can see from the `head()` function that Condition isn't yet coded as a factor. Let's fix that.
+```{r}
+rm_data_tidied <- rm_data %>%
+  mutate(Condition = factor(Condition))
+head(rm_data_tidied)
+```
 
+## Summary Statistics
+
+Let's generate the Mean and Standard Deviation for each of our four conditions.
+```{r}
+rm_data_tidied %>%
+  group_by(Condition) %>%
+  summarise(mean = mean(RT), sd = sd (RT))
+```
+
+## Visualising our Data
+
+And visualise the data - note here that I am using the `fct_reorder()` function to reorder the levels of our factor based on the RT. This can be useful to make our viusalisations more easily interpretable.
+```{r}
+rm_data_tidied %>%
+  ggplot(aes(x = fct_reorder(Condition, RT), y = RT, colour = Condition)) +
+  geom_violin() +
+  geom_jitter(width = .1) +
+  guides(colour = FALSE) +
+  stat_summary(fun.data = "mean_cl_boot", colour = "black") +
+  theme(text = element_text(size = 13)) +
+  theme_minimal() +
+  labs(x = "Condition", y = "RT (s)")
+```
+
+## Building our ANOVA Model
+
+We build our ANOVA model in a similar way as we did previously. Except in this case our random effect we define as `(1 + Condition | Participant)`. I order to capture the fact that our `Condition` is a repeated measures factor, we add it to the random effect term like this.
+
+```{r}
+rm_model <- aov_4(RT ~ Condition + (1 + Condition | Participant), data = rm_data_tidied)
+```
+
+## Interpreting the Model Output
+
+We extract the summary of our model in the same way we did for the between participants ANOVA.
+
+```{r}
+summary(rm_model)
+```
+
+With this option, we didn't get the effect size measure in our measure. We can generate that though by asking for our model to be presented in anova format using the `anova()` function.
+
+```{r}
+anova(rm_model)
+```
+
+The effect size is measured by ges and is the recommended effect size measure for repeated measures designs (Bakeman, 2005). Note the dfs in this output are always corrected as if there is a violation of sphericity - to be conservative (and to avoid Type I errors) we might be better off to always choose these corrected dfs.
+
+From this, we can see we have effect of Condition. But we don't know where the differences lie between the different levels of our factor. So we use the `emmeans()` function to find that out. Here we will be using the Bonferroni correction for multiple comparisons.
+
+```{r}
+emmeans(rm_model, pairwise ~ Condition, adjust = "Bonferroni")
+
+```
+
+From the above we can see that all conditions differ from all other conditions, *apart* from the Easy vs. Very Easy comparison which is not significant.
 ## Improve this Workshop
 
 If you spot any issues/errors in this workshop, you can raise an issue or create a pull request for [this repo](https://github.com/ajstewartlang/11_glm_anova_pt1). 
