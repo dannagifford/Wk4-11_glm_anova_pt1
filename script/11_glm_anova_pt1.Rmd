@@ -249,6 +249,7 @@ Again we see that our two experimental factors are not coded as factors so let's
 ```{r}
 factorial_data_tidied <- factorial_data %>%
   mutate(Sentence = factor(Sentence), Context = factor(Context))
+head(factorial_data_tidied)
 ```
 
 ## Summarising our Data
@@ -301,7 +302,7 @@ factorial_data_tidied %>%
 
 ## Building our ANOVA Model
 
-We have our data in long format where every row is one observation. We haven't done any data aggregation. The `aov_4()` function will do this for us as ANOVA models need to be built over means (not raw data).  As the data haven't been aggregeated, we could actually build two ANOVA models with the data in the current format. We could build one ANOVA where we treat Subjects as a random effect (also known as F1 ANOVA), and another where we treat Items as a random factor (also known as F2 ANOVA). In language research, it's commonplace to conduct both types of analysis. The by-items (F2) analysis allows us to ensure any effects we might find aren't limited to just a subset of experimental items. 
+We have our data in long format where every row is one observation. We haven't done any data aggregation. The `aov_4()` function will do this for us as ANOVA models need to be built over means (not raw data).  As the data haven't been aggregated, we could actually build two ANOVA models with the data in the current format. We could build one ANOVA where we treat Subjects as a random effect (also known as F1 ANOVA), and another where we treat Items as a random factor (also known as F2 ANOVA). In language research, it's commonplace to conduct both types of analysis. The by-items (F2) analysis allows us to ensure any effects we might find aren't limited to just a subset of experimental items. 
 
 First we'll look at how to run a by-subjects ANOVA for our factorial design using `aov_4()`. The syntax is very similar to what we ran previously, although this time you'll see we have a new term `Context * Sentence`. This term corresponds to two main effects, plus the interaction between them. It's shorthand for `Context + Sentence + Context:Sentence`. We also specify this in the random effect By setting `na.rm` to be TRUE, we are telling the analysis to ignore individual trials where there might be missing data - effectively this calculates the condition means over the data that is present (and ignores trials where it is missing).
 
@@ -339,6 +340,33 @@ We conducted a 2 (Context: Positive vs. Negative) x 2 (Sentence: Positive vs. Ne
 
 The interaction was interpreted by conducting Bonferroni-corrected pairwise companions.  These comparisons revealed that the interaction was driven by Negative Sentences being processed faster in Negative vs. Positive Contexts (1,474 ms. vs. 1,628 ms., t(118) = 2.78, *p* = .012) while Positive Sentences were read at similar speeds in Negative vs. Positive Contexts (1,595 ms. vs. 1,579 ms., t(118) = .284, *p* = 1).
 
+# Your Challenge
+
+I would now like you to work on the following three questions on your own.
+
+## Question 1
+
+Our first data file is called ANOVA_lab1_data1.csv and can be found here:
+
+https://raw.githubusercontent.com/ajstewartlang/11_glm_anova_pt1/master/data/ANOVA_data1.csv
+
+24 participants responded to a word that was either common (i.e., high lexical frequency) or rare (i.e., low lexical frequency).  This is our IV and is coded as 'high' vs. lLow'.  Our DV is reaction time and is coded as 'RT'. Subject number is coded as 'Subject'. We want to know whether there is a difference between conditions (and if so, where that difference lies). Visualise the data, generate descrtiptives, and run the appropriate ANOVA to determine whether our independent variable (Condition) has an influence on our dependent variable (RT).
+
+## Question 2
+
+Our second data file is called ANOVA_lab1_data2.csv and can be found here:
+
+https://raw.githubusercontent.com/ajstewartlang/11_glm_anova_pt1/master/data/ANOVA_data2.csv
+
+These data are also from a reaction time experiment but with a slightly more complex design.  48 participants responded to a word that differed in how frequent it was.  This factor is between participants and we have four levels coded as 'very low', 'low', 'high', and 'very high'.  Our DV is reaction time and is coded as 'RT'. Subject number is coded as 'Subject'. We want to know if there is a difference between our conditions (and if so, where that difference lies).
+
+## Question 3
+
+Our third data file is called ANOVA_lab1_data3.csv and can be found here:
+
+https://raw.githubusercontent.com/ajstewartlang/11_glm_anova_pt1/master/data/ANOVA_data3.csv
+
+These data are from a 2 x 2 repeated measures reaction time experiment.  We were interested in how quickly participants could respond to images that were Large vs. Small and in Colour vs. Black & White.  We expect that Large Colour images will be responded to more quickly than Small B & W images.  We're not sure about Small Colour images and Large B & W images.  We measured the response times of 24 participants responding to an image in each of these four conditions.  We want to determine if there is a difference between our conditions (and if so, where that difference lies).
 
 ## Improve this Workshop
 
