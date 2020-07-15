@@ -113,8 +113,8 @@ my_data_tidied %>%
   geom_jitter(width = .1) +
   guides(colour = FALSE) +
   stat_summary(fun.data = "mean_cl_boot", colour = "black") +
-  theme(text = element_text(size = 13)) +
-  theme_minimal()
+  theme_minimal() +
+  theme(text = element_text(size = 13)) 
 ```
 
 We have built a visualisation where we have plotted the raw data points using the `geom_jitter()` function, and the shape of the distribution for each condition using the `geom_violin()` function. We have also added some summary data in the form of the Mean and Confidence Intervals around the Mean using the `stat_summary()` function.
@@ -216,8 +216,8 @@ rm_data_tidied %>%
   geom_jitter(width = .1) +
   guides(colour = FALSE) +
   stat_summary(fun.data = "mean_cl_boot", colour = "black") +
-  theme(text = element_text(size = 13)) +
   theme_minimal() +
+  theme(text = element_text(size = 13)) +
   labs(x = "Condition", y = "RT (s)")
 ```
 
@@ -249,7 +249,6 @@ From this, we can see we have effect of Condition. But we don't know where the d
 
 ```{r}
 emmeans(rm_model, pairwise ~ Condition, adjust = "Bonferroni")
-
 ```
 
 From the above we can see that all conditions differ from all other conditions, *apart* from the Easy vs. Very Easy comparison which is not significant.
@@ -337,8 +336,8 @@ factorial_data_tidied %>%
   geom_jitter(width = .1, alpha = .25) +
   guides(colour = FALSE) +
   stat_summary(fun.data = "mean_cl_boot", colour = "black") +
-  theme(text = element_text(size = 13)) +
   theme_minimal() +
+  theme(text = element_text(size = 13)) +
   labs(x = "Context X Sentence", y = "RT (ms)")
 ```
 
