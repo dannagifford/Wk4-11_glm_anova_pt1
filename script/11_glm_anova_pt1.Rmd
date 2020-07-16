@@ -17,7 +17,7 @@ In this workshop we will examine how to conduct Analysis of Variance (ANOVA) in 
 
 <center>
 
-<iframe width="560" height="315" src="https://youtube.com/embed/vw-BoLFHw2s" frameborder="0" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://youtube.com/embed/HjwspcOlyJ4" frameborder="0" allowfullscreen></iframe>
 
 </center>
 
