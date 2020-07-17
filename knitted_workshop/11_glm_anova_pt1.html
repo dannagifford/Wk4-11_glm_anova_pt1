@@ -1999,21 +1999,47 @@ head(factorial_data_tidied)</code></pre>
 <p>I would now like you to work on the following three questions on your own.</p>
 <div id="question-1" class="section level2">
 <h2>Question 1</h2>
-<p>Our first data file is called ANOVA_lab1_data1.csv and can be found here:</p>
+<p>Our first data file is called ANOVA_data1.csv and can be found here:</p>
 <p><a href="https://raw.githubusercontent.com/ajstewartlang/11_glm_anova_pt1/master/data/ANOVA_data1.csv" class="uri">https://raw.githubusercontent.com/ajstewartlang/11_glm_anova_pt1/master/data/ANOVA_data1.csv</a></p>
-<p>24 participants responded to a word that was either common (i.e., high lexical frequency) or rare (i.e., low lexical frequency). This is our IV and is coded as ‘high’ vs. lLow’. Our DV is reaction time and is coded as ‘RT’. Subject number is coded as ‘Subject’. We want to know whether there is a difference between conditions (and if so, where that difference lies). Visualise the data, generate descrtiptives, and run the appropriate ANOVA to determine whether our independent variable (Condition) has an influence on our dependent variable (RT).</p>
+<p>24 participants responded to a word that was either common (i.e., high lexical frequency) or rare (i.e., low lexical frequency). This is our IV and is coded as ‘high’ vs. low’. Our DV is reaction time and is coded as ‘RT’. Subject number is coded as ‘Subject’. We want to know whether there is a difference between conditions (and if so, where that difference lies). Visualise the data, generate descrtiptives, and run the appropriate ANOVA to determine whether our independent variable (Condition) has an influence on our dependent variable (RT).</p>
 </div>
 <div id="question-2" class="section level2">
 <h2>Question 2</h2>
-<p>Our second data file is called ANOVA_lab1_data2.csv and can be found here:</p>
+<p>Our second data file is called ANOVA_data2.csv and can be found here:</p>
 <p><a href="https://raw.githubusercontent.com/ajstewartlang/11_glm_anova_pt1/master/data/ANOVA_data2.csv" class="uri">https://raw.githubusercontent.com/ajstewartlang/11_glm_anova_pt1/master/data/ANOVA_data2.csv</a></p>
-<p>These data are also from a reaction time experiment but with a slightly more complex design. 48 participants responded to a word that differed in how frequent it was. This factor is between participants and we have four levels coded as ‘very low’, ‘low’, ‘high’, and ‘very high’. Our DV is reaction time and is coded as ‘RT’. Subject number is coded as ‘Subject’. We want to know if there is a difference between our conditions (and if so, where that difference lies).</p>
+<p>These data are also from a reaction time experiment but with a slightly more complex design.48 participants responded to a word that differed in how frequent it was. This factor is between participants and we have four levels coded as ‘very low’, ‘low’, ‘high’, and ‘very high’. Our DV is reaction time and is coded as ‘RT’. Subject number is coded as ‘Subject’. We want to know if there is a difference between our conditions (and if so, where that difference lies).</p>
 </div>
 <div id="question-3" class="section level2">
 <h2>Question 3</h2>
-<p>Our third data file is called ANOVA_lab1_data3.csv and can be found here:</p>
+<p>Our third data file is called ANOVA_data3.csv and can be found here:</p>
 <p><a href="https://raw.githubusercontent.com/ajstewartlang/11_glm_anova_pt1/master/data/ANOVA_data3.csv" class="uri">https://raw.githubusercontent.com/ajstewartlang/11_glm_anova_pt1/master/data/ANOVA_data3.csv</a></p>
 <p>These data are from a 2 x 2 repeated measures reaction time experiment. We were interested in how quickly participants could respond to images that were Large vs. Small and in Colour vs. Black &amp; White. We expect that Large Colour images will be responded to more quickly than Small B &amp; W images. We’re not sure about Small Colour images and Large B &amp; W images. We measured the response times of 24 participants responding to an image in each of these four conditions. We want to determine if there is a difference between our conditions (and if so, where that difference lies).</p>
+</div>
+<div id="question-4" class="section level2">
+<h2>Question 4</h2>
+<p>Our fourth data file is called ANOVA_data4.csv and can be found here:</p>
+<p><a href="https://raw.githubusercontent.com/ajstewartlang/11_glm_anova_pt1/master/data/ANOVA_data4.csv" class="uri">https://raw.githubusercontent.com/ajstewartlang/11_glm_anova_pt1/master/data/ANOVA_data4.csv</a></p>
+<p>These data are from a 2 x 2 x 3 mixed design experiment where we measured people’s response times to maths questions that were either Easy or Hard, and to which they had to respond either under Time Pressure or under No Time Pressure. These are our first two factors and are repeated measures (i.e., everyone saw all 4 conditions). Our third factor is between subjects and corresponds to whether our participants were in one of three groups. The groups were Psychology Students, Maths Students, and Arts Students. We want to know where a participant’s perfomance on the maths questions under time pressure vs. not under time pressure is influenced by which one of these three groups they belong to. Conduct the appropriate ANOVA to answer this question. Remember to start off with some data visualisation(s).</p>
+</div>
+</div>
+<div id="answers" class="section level1">
+<h1>Answers</h1>
+<div id="question-1-1" class="section level2">
+<h2>Question 1</h2>
+<p>The ANOVA should reveal an effect of Condition with F(1, 22) = 91.217. As there are just two levels to our factor, we don’t need to run any follow up tests to know what’s driving the effect. By looking at the descriptive statistics, we see that RT is 865 for our <code>high</code> condition and 1178 for our <code>low</code> condition.</p>
+</div>
+<div id="question-2-1" class="section level2">
+<h2>Question 2</h2>
+<p>The ANOVA should reveal an effect of Condition with F(3, 44) = 203.21. To interpret this further we need to run follow up comparisons. Using the Bonferroni correction these should indicate that every level of Condition differs from every other level.</p>
+</div>
+<div id="question-3-1" class="section level2">
+<h2>Question 3</h2>
+<p>The ANOVA should reveal a main effect of Size (F(1, 23) = 198.97), a main effect of Colour (F(1, 23) = 524.27), and an interaction between these two factors (F(1, 23) = 11.08). To interpret this interaction further we need to run follow up comparisons. Using the Bonferroni correction these should indicate that every level of Condition differs from every other level.</p>
+</div>
+<div id="question-4-1" class="section level2">
+<h2>Question 4</h2>
+<p>This question is slightly trickier than the ones we’ve looked at so far. After you’ve built your ANOVA (remember to add only your repeated measures factors to your random effect term), you’ll discover a significant 3-way interaction (F(2, 69) = 4.63). You’ll need to break this down further - one possible approach would be to look at the interaction between Difficulty and Time Pressure <em>separately</em> for each level of our between group factor. In other words, you’d build one 2 x 2 ANOVA model for each of your Student Groups. If you do this, you’ll see that the 2 x 2 interaction is not significant for the Arts group (there’s just a main effect of Difficulty), nor the Maths group (again, just a main effect of Difficulty), but the interaction <em>is</em> significant for the Psychology group (F(1, 23) = 11.08)) - as too are the two main effects of Difficulty and Time Pressure. But as these two factors interact, the meaning in our data is in the interaction term (not just these two main effects).</p>
+<p>So, the 3-way interaction was telling us that the 2-way interaction differed for at least one of our Groups (relative to the other Groups). We need to examine this 2-way interaction further for our Psychology group by conducting pairwise comparisons, exactly as you’ve done above. This will reveal that for our Psychology group, each condition differs signficantly from the other conditions. It means that for Psychology students, the Hard problems take long under Time Pressuse vs. under No Time Pressure, and the Easy problems take longer under Time Pressure vs. under No Time Pressure (but neither of these are as along as for Hard problems).</p>
 </div>
 <div id="improve-this-workshop" class="section level2">
 <h2>Improve this Workshop</h2>

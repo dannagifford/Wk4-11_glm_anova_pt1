@@ -388,7 +388,7 @@ I would now like you to work on the following three questions on your own.
 
 ## Question 1
 
-Our first data file is called ANOVA_lab1_data1.csv and can be found here:
+Our first data file is called ANOVA_data1.csv and can be found here:
 
 https://raw.githubusercontent.com/ajstewartlang/11_glm_anova_pt1/master/data/ANOVA_data1.csv
 
@@ -396,7 +396,7 @@ https://raw.githubusercontent.com/ajstewartlang/11_glm_anova_pt1/master/data/ANO
 
 ## Question 2
 
-Our second data file is called ANOVA_lab1_data2.csv and can be found here:
+Our second data file is called ANOVA_data2.csv and can be found here:
 
 https://raw.githubusercontent.com/ajstewartlang/11_glm_anova_pt1/master/data/ANOVA_data2.csv
 
@@ -404,13 +404,21 @@ These data are also from a reaction time experiment but with a slightly more com
 
 ## Question 3
 
-Our third data file is called ANOVA_lab1_data3.csv and can be found here:
+Our third data file is called ANOVA_data3.csv and can be found here:
 
 https://raw.githubusercontent.com/ajstewartlang/11_glm_anova_pt1/master/data/ANOVA_data3.csv
 
 These data are from a 2 x 2 repeated measures reaction time experiment. We were interested in how quickly participants could respond to images that were Large vs. Small and in Colour vs. Black & White. We expect that Large Colour images will be responded to more quickly than Small B & W images. We're not sure about Small Colour images and Large B & W images. We measured the response times of 24 participants responding to an image in each of these four conditions. We want to determine if there is a difference between our conditions (and if so, where that difference lies).
 
-### Answers
+## Question 4
+
+Our fourth data file is called ANOVA_data4.csv and can be found here:
+
+https://raw.githubusercontent.com/ajstewartlang/11_glm_anova_pt1/master/data/ANOVA_data4.csv
+
+These data are from a 2 x 2 x 3 mixed design experiment where we measured people's response times to maths questions that were either Easy or Hard, and to which they had to respond either under Time Pressure or under No Time Pressure. These are our first two factors and are repeated measures (i.e., everyone saw all 4 conditions). Our third factor is between subjects and corresponds to whether our participants were in one of three groups. The groups were Psychology Students, Maths Students, and Arts Students.  We want to know where a participant's perfomance on the maths questions under time pressure vs. not under time pressure is influenced by which one of these three groups they belong to. Conduct the appropriate ANOVA to answer this question. Remember to start off with some data visualisation(s).
+
+# Answers
 
 ## Question 1
 
@@ -426,7 +434,10 @@ The ANOVA should reveal a main effect of Size (F(1, 23) = 198.97), a main effect
 
 ## Question 4
 
+This question is slightly trickier than the ones we've looked at so far. After you've built your ANOVA (remember to add only your repeated measures factors to your random effect term), you'll discover a significant 3-way interaction (F(2, 69) = 4.63). You'll need to break this down further - one possible approach would be to look at the interaction between Difficulty and Time Pressure *separately* for each level of our between group factor. In other words, you'd build one 2 x 2 ANOVA model for each of your Student Groups. If you do this, you'll see that the 2 x 2 interaction is not significant for the Arts group (there's just a main effect of Difficulty), nor the Maths group (again, just a main effect of Difficulty), but the interaction *is* significant for the Psychology group (F(1, 23) = 11.08)) - as too are the two main effects of Difficulty and Time Pressure. But as these two factors interact, the meaning in our data is in the interaction term (not just these two main effects). 
+
+So, the 3-way interaction was telling us that the 2-way interaction differed for at least one of our Groups (relative to the other Groups). We need to examine this 2-way interaction further for our Psychology group by conducting pairwise comparisons, exactly as you've done above. This will reveal that for our Psychology group, each condition differs signficantly from the other conditions. It means that for Psychology students, the Hard problems take long under Time Pressuse vs. under No Time Pressure, and the Easy problems take longer under Time Pressure vs. under No Time Pressure (but neither of these are as along as for Hard problems).
+
 ## Improve this Workshop
 
 If you spot any issues/errors in this workshop, you can raise an issue or create a pull request for [this repo](https://github.com/ajstewartlang/11_glm_anova_pt1). 
-
