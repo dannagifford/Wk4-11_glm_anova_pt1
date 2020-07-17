@@ -392,7 +392,7 @@ Our first data file is called ANOVA_lab1_data1.csv and can be found here:
 
 https://raw.githubusercontent.com/ajstewartlang/11_glm_anova_pt1/master/data/ANOVA_data1.csv
 
-24 participants responded to a word that was either common (i.e., high lexical frequency) or rare (i.e., low lexical frequency).  This is our IV and is coded as 'high' vs. lLow'.  Our DV is reaction time and is coded as 'RT'. Subject number is coded as 'Subject'. We want to know whether there is a difference between conditions (and if so, where that difference lies). Visualise the data, generate descrtiptives, and run the appropriate ANOVA to determine whether our independent variable (Condition) has an influence on our dependent variable (RT).
+24 participants responded to a word that was either common (i.e., high lexical frequency) or rare (i.e., low lexical frequency). This is our IV and is coded as 'high' vs. low'. Our DV is reaction time and is coded as 'RT'. Subject number is coded as 'Subject'. We want to know whether there is a difference between conditions (and if so, where that difference lies). Visualise the data, generate descrtiptives, and run the appropriate ANOVA to determine whether our independent variable (Condition) has an influence on our dependent variable (RT).
 
 ## Question 2
 
@@ -400,7 +400,7 @@ Our second data file is called ANOVA_lab1_data2.csv and can be found here:
 
 https://raw.githubusercontent.com/ajstewartlang/11_glm_anova_pt1/master/data/ANOVA_data2.csv
 
-These data are also from a reaction time experiment but with a slightly more complex design.  48 participants responded to a word that differed in how frequent it was.  This factor is between participants and we have four levels coded as 'very low', 'low', 'high', and 'very high'.  Our DV is reaction time and is coded as 'RT'. Subject number is coded as 'Subject'. We want to know if there is a difference between our conditions (and if so, where that difference lies).
+These data are also from a reaction time experiment but with a slightly more complex design.48 participants responded to a word that differed in how frequent it was. This factor is between participants and we have four levels coded as 'very low', 'low', 'high', and 'very high'. Our DV is reaction time and is coded as 'RT'. Subject number is coded as 'Subject'. We want to know if there is a difference between our conditions (and if so, where that difference lies).
 
 ## Question 3
 
@@ -408,7 +408,23 @@ Our third data file is called ANOVA_lab1_data3.csv and can be found here:
 
 https://raw.githubusercontent.com/ajstewartlang/11_glm_anova_pt1/master/data/ANOVA_data3.csv
 
-These data are from a 2 x 2 repeated measures reaction time experiment.  We were interested in how quickly participants could respond to images that were Large vs. Small and in Colour vs. Black & White.  We expect that Large Colour images will be responded to more quickly than Small B & W images.  We're not sure about Small Colour images and Large B & W images.  We measured the response times of 24 participants responding to an image in each of these four conditions.  We want to determine if there is a difference between our conditions (and if so, where that difference lies).
+These data are from a 2 x 2 repeated measures reaction time experiment. We were interested in how quickly participants could respond to images that were Large vs. Small and in Colour vs. Black & White. We expect that Large Colour images will be responded to more quickly than Small B & W images. We're not sure about Small Colour images and Large B & W images. We measured the response times of 24 participants responding to an image in each of these four conditions. We want to determine if there is a difference between our conditions (and if so, where that difference lies).
+
+### Answers
+
+## Question 1
+
+The ANOVA should reveal an effect of Condition with F(1, 22) = 91.217. As there are just two levels to our factor, we don't need to run any follow up tests to know what's driving the effect. By looking at the descriptive statistics, we see that RT is 865 for our `high` condition and 1178 for our `low` condition.
+
+## Question 2
+
+The ANOVA should reveal an effect of Condition with F(3, 44) = 203.21. To interpret this further we need to run follow up comparisons. Using the Bonferroni correction these should indicate that every level of Condition differs from every other level.
+
+## Question 3
+
+The ANOVA should reveal a main effect of Size (F(1, 23) = 198.97), a main effect of Colour (F(1, 23) = 524.27), and an interaction between these two factors (F(1, 23) = 11.08). To interpret this interaction further we need to run follow up comparisons. Using the Bonferroni correction these should indicate that every level of Condition differs from every other level.
+
+## Question 4
 
 ## Improve this Workshop
 
