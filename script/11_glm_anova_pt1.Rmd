@@ -25,13 +25,13 @@ In this workshop we will examine how to conduct Analysis of Variance (ANOVA) in 
 
 ## Slides
 
-If you have a Google account, you can also view and download the slides in a range of formats by clicking on the image below. If you don't have a Google account, you can download the slides in .pdf format by [clicking here](../slides/glm_anova_pt1_video1.pdf).
+You can download the slides in .pdf format by clicking on the image below. 
 
 &nbsp;&nbsp;
 
 <center>
 
-[![Link to slides](../images/glm_anova_pt1_video1.png){width=75%}](https://docs.google.com/presentation/d/1Jwcwlk5JOjYLMZQkulN3c5nS01BKtF-ldozRQVE-2G8/edit?usp=sharing)
+[![Link to slides](../images/glm_anova_pt1_video1.png){width=75%}](../slides/glm_anova_pt1_video1.pdf)
 
 </center>
 
@@ -53,13 +53,13 @@ In this second video, I will show you how to build a between participants ANOVA 
 
 ## Slides
 
-If you have a Google account, you can also view and download the slides in a range of formats by clicking on the image below. If you don't have a Google account, you can download the slides in .pdf format by [clicking here](../slides/glm_anova_pt1_video2.pdf).
+You can download the slides in .pdf format by clicking on the image below.
 
 &nbsp;&nbsp;
 
 <center>
 
-[![Link to slides](../images/glm_anova_pt1_video2.png){width=75%}](https://docs.google.com/presentation/d/1BbfROcOP8jXxhmj9flB-XcU8lxl9GuiQg2KjMHWORWc/edit?usp=sharing)
+[![Link to slides](../images/glm_anova_pt1_video2.png){width=75%}](../slides/glm_anova_pt1_video2.pdf)
 
 </center>
 
@@ -170,13 +170,13 @@ In other words, drinking some coffee improves motor performance relative to drin
 
 ## Slides
 
-If you have a Google account, you can also view and download the slides in a range of formats by clicking on the image below. If you don't have a Google account, you can download the slides in .pdf format by [clicking here](../slides/glm_anova_pt1_video3.pdf).
+You can download the slides in .pdf format by clicking on the image below. 
 
 &nbsp;&nbsp;
 
 <center>
 
-[![Link to slides](../images/glm_anova_pt1_video3.png){width=75%}](https://docs.google.com/presentation/d/1OiaK8VNoEsRhlFTRo4iOYxhrCLP8o4J0h6-wMFvKUW0/edit?usp=sharing)
+[![Link to slides](../images/glm_anova_pt1_video3.png){width=75%}](../slides/glm_anova_pt1_video3.pdf)
 
 </center>
 
@@ -269,13 +269,13 @@ From the above we can see that all conditions differ from all other conditions, 
 
 ## Slides
 
-If you have a Google account, you can also view and download the slides in a range of formats by clicking on the image below. If you don't have a Google account, you can download the slides in .pdf format by [clicking here](../slides/glm_anova_pt1_video4.pdf).
+You can download the slides in .pdf format by clicking on the image below.
 
 &nbsp;&nbsp;
 
 <center>
 
-[![Link to slides](../images/glm_anova_pt1_video4.png){width=75%}](https://docs.google.com/presentation/d/1r9R4M9HUXaI9OJcxlaPrDm9QyHMG9z40FJxq9S1WWSA/edit?usp=sharing)
+[![Link to slides](../images/glm_anova_pt1_video4.png){width=75%}](../slides/glm_anova_pt1_video4.pdf)
 
 </center>
 
