@@ -25,7 +25,7 @@ In this workshop we will examine how to conduct Analysis of Variance (ANOVA) in 
 
 ## Slides
 
-You can download the slides in .pdf format by clicking on the image below. 
+You can download the slides in .odp format by clicking [here](../slides/glm_anova_pt1_video1.odp) and in .pdf format by clicking on the image below. 
 
 &nbsp;&nbsp;
 
@@ -53,7 +53,7 @@ In this second video, I will show you how to build a between participants ANOVA 
 
 ## Slides
 
-You can download the slides in .pdf format by clicking on the image below.
+You can download the slides in .odp format by clicking [here](../slides/glm_anova_pt1_video2.odp) and in .pdf format by clicking on the image below. 
 
 &nbsp;&nbsp;
 
@@ -170,8 +170,7 @@ In other words, drinking some coffee improves motor performance relative to drin
 
 ## Slides
 
-You can download the slides in .pdf format by clicking on the image below. 
-
+You can download the slides in .odp format by clicking [here](../slides/glm_anova_pt1_video3.odp) and in .pdf format by clicking on the image below. 
 &nbsp;&nbsp;
 
 <center>
@@ -269,7 +268,7 @@ From the above we can see that all conditions differ from all other conditions, 
 
 ## Slides
 
-You can download the slides in .pdf format by clicking on the image below.
+You can download the slides in .odp format by clicking [here](../slides/glm_anova_pt1_video4.odp) and in .pdf format by clicking on the image below. 
 
 &nbsp;&nbsp;
 
