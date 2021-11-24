@@ -17,7 +17,7 @@ In this workshop we will examine how to conduct Analysis of Variance (ANOVA) in 
 
 <center>
 
-<iframe width="560" height="315" src="https://youtube.com/embed/HjwspcOlyJ4" frameborder="0" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://youtube.com/embed/HjwspcOlyJ4" frameborder="0" data-external="1" allowfullscreen></iframe>
 
 </center>
 
@@ -45,7 +45,7 @@ In this second video, I will show you how to build a between participants ANOVA 
 
 <center>
 
-<iframe width="560" height="315" src="https://youtube.com/embed/iqIfjl18Kbo" frameborder="0" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://youtube.com/embed/iqIfjl18Kbo" frameborder="0" data-external="1" allowfullscreen></iframe>
 
 </center>
 
@@ -162,7 +162,7 @@ In other words, drinking some coffee improves motor performance relative to drin
 
 <center>
 
-<iframe width="560" height="315" src="https://youtube.com/embed/Xc3vYaQAuS8" frameborder="0" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://youtube.com/embed/Xc3vYaQAuS8" frameborder="0" data-external="1" allowfullscreen></iframe>
 
 </center>
 
@@ -260,7 +260,7 @@ From the above we can see that all conditions differ from all other conditions, 
 
 <center>
 
-<iframe width="560" height="315" src="https://youtube.com/embed/zpBihhUbF3g" frameborder="0" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://youtube.com/embed/zpBihhUbF3g" frameborder="0" data-external="1" allowfullscreen></iframe>
 
 </center>
 
