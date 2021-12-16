@@ -279,9 +279,10 @@ You can download the slides in .odp format by clicking [here](../slides/glm_anov
 </center>
 
 &nbsp;&nbsp;
+
 ## Reading in our Data
 
-```{r}
+```{r, message=FALSE}
 factorial_data <- read_csv("https://raw.githubusercontent.com/ajstewartlang/11_glm_anova_pt1/master/data/factorial_data.csv")
 head(factorial_data)
 ```
