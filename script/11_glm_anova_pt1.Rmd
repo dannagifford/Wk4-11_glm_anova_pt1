@@ -379,7 +379,7 @@ The key comparisons are the `Negative Negative - Positive Negative` and the `Neg
 
 We conducted a 2 (Context: Positive vs. Negative) x 2 (Sentence: Positive vs. Negative) repeated measures ANOVA to investigate the influence of Context valence on reaction times to Sentences of Positive or Negative valence.  The ANOVA revealed no effect of Sentence (F < 1), no effect of Context (F(1, 59) = 3.18, *p* = .080, ηG2 =  .006), but an interaction between Sentence and Context (F(1, 59) = 4.60, *p* = .036, ηG2 = .009). 
 
-The interaction was interpreted by conducting Bonferroni-corrected pairwise companions.  These comparisons revealed that the interaction was driven by Negative Sentences being processed faster in Negative vs. Positive Contexts (1,474 ms. vs. 1,628 ms., t(118) = 2.78, *p* = .012) while Positive Sentences were read at similar speeds in Negative vs. Positive Contexts (1,595 ms. vs. 1,579 ms., t(118) = .284, *p* = 1).
+The interaction was interpreted by conducting Bonferroni-corrected pairwise companions.  These comparisons revealed that the interaction was driven by Negative Sentences being processed faster in Negative vs. Positive Contexts (1,474 ms. vs. 1,628 ms., t(118) = 2.78, *p* = .0064) while Positive Sentences were read at similar speeds in Negative vs. Positive Contexts (1,595 ms. vs. 1,579 ms., t(118) = .284, *p* = 1).
 
 # Your Challenge
 
