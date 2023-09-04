@@ -1,1 +1,1 @@
-# 11_glm_anova_pt1
+# Workshop on GLM ANOVA Part 1
