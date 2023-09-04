@@ -1,6 +1,8 @@
 ---
 title: "The General Linear Model - ANOVA Part 1"
-author: "Andrew Stewart, Email: drandrewjstewart@gmail.com, Twitter: @ajstewart_lang"
+author:
+    - Dr Danna Gifford, Unit coordinator (2023), danna.gifford@manchester.ac.uk
+    - Prof Andrew Stewart, Original author (2020-2022), drandrewjstewart@gmail.com
 date: ""
 output: 
  html_document:
@@ -39,7 +41,7 @@ You can download the slides in .odp format by clicking [here](../slides/glm_anov
 
 # Between Participants ANOVA
 
-In this second video, I will show you how to build a between participants ANOVA model in R using the `{afex}` package.
+This second video will show you how to build a between participants ANOVA model in R using the `{afex}` package.
 
 &nbsp;&nbsp;
 
@@ -122,7 +124,7 @@ We have built a visualisation where we have plotted the raw data points using th
 
 ## Building our ANOVA Model
 
-Let's now build our model using the `aov_4()` function in the `{afex}` package. The syntax for ANOVA models in `aov_4()` is: `aov_4(DV ~ IV + (1 | Participant), data = my_data_tidied)`. The `~` symbol means predicted by, the `(1 | Participant)` term corresponds to our random effect - we obviously can't test all the participants in the world so have taken just a random sample from this population. Finally, we need to specify what dataset we are using by making that clear in the `data = my_data_tidied` bit of the model. We are going to map the output of the `aov()` function onto a variable I'm calling `model`. This means that the ANOVA results will be stored in this variable and will allow us to access them later.
+Let's now build our model using the `aov_4()` function in the `{afex}` package. The syntax for ANOVA models in `aov_4()` is: `aov_4(DV ~ IV + (1 | Participant), data = my_data_tidied)`. The `~` symbol means predicted by, the `(1 | Participant)` term corresponds to our random effect - we obviously can't test all the participants in the world so have taken just a random sample from this population. Finally, we need to specify what dataset we are using by making that clear in the `data = my_data_tidied` bit of the model. We are going to map the output of the `aov()` function onto a variable called `model`. This means that the ANOVA results will be stored in this variable and will allow us to access them later.
 
 ```{r}
 model <- aov_4(Ability ~ Condition + (1 | Participant), data = my_data_tidied)
@@ -181,7 +183,7 @@ You can download the slides in .odp format by clicking [here](../slides/glm_anov
 
 &nbsp;&nbsp;
 
-Now it's your chance to work with the data I examined in the video above. Let’s imagine we have an experiment where we asked 32 participants to learn how to pronounce words of differing levels of complexity - Very Easy, Easy, Hard, and Very Hard. They were presented with these words in an initial exposure phase. After a 30 minute break we tested participants by asking them to say the words out loud when they appeared on a computer screen. We recorded their times in seconds. We want to know whether there is a difference in their response times for each level of word complexity. 
+Now it's your chance to work with the data examined in the video above. Let’s imagine we have an experiment where we asked 32 participants to learn how to pronounce words of differing levels of complexity - Very Easy, Easy, Hard, and Very Hard. They were presented with these words in an initial exposure phase. After a 30 minute break we tested participants by asking them to say the words out loud when they appeared on a computer screen. We recorded their times in seconds. We want to know whether there is a difference in their response times for each level of word complexity. 
 
 ## Reading in our Data
 
@@ -209,7 +211,7 @@ rm_data_tidied %>%
 
 ## Visualising our Data
 
-And visualise the data - note here that I am using the `fct_reorder()` function to reorder the levels of our factor based on the RT. This can be useful to make our viusalisations more easily interpretable.
+And visualise the data - note here the use of using the `fct_reorder()` function to reorder the levels of our factor based on the RT. This can be useful to make our viusalisations more easily interpretable.
 ```{r}
 rm_data_tidied %>%
   ggplot(aes(x = fct_reorder(Condition, RT), y = RT, colour = Condition)) +
@@ -224,7 +226,7 @@ rm_data_tidied %>%
 
 ## Building our ANOVA Model
 
-We build our ANOVA model in a similar way as we did previously. Except in this case our random effect we define as `(1 + Condition | Participant)`. I order to capture the fact that our `Condition` is a repeated measures factor, we add it to the random effect term like this.
+We build our ANOVA model in a similar way as we did previously. Except in this case our random effect we define as `(1 + Condition | Participant)`. In order to capture the fact that our `Condition` is a repeated measures factor, we add it to the random effect term like this.
 
 ```{r}
 rm_model <- aov_4(RT ~ Condition + (1 + Condition | Participant), data = rm_data_tidied)
@@ -327,7 +329,7 @@ Now we have the summary statistics that we expect.
 
 ## Visualising our Data
 
-We can use a modification of the `ggplot()` code we've used above to generate our visualisation. Note, I am filtering our the missing data using the `filter()` function before we start our plot.  I am also specifying that we're wanting to plot a combination of our two factors in the `aes()` definition using `Context:Sentence`. There are further things we could modify to improve the look of this graph. Can you figure out ways in which the labelling of the two factors could be clearer?
+We can use a modification of the `ggplot()` code we've used above to generate our visualisation. Note, we are filtering our the missing data using the `filter()` function before we start our plot.  We also specify that we're wanting to plot a combination of our two factors in the `aes()` definition using `Context:Sentence`. There are further things we could modify to improve the look of this graph. Can you figure out ways in which the labelling of the two factors could be clearer?
 
 ```{r}
 factorial_data_tidied %>%
@@ -384,7 +386,7 @@ The interaction was interpreted by conducting Bonferroni-corrected pairwise comp
 
 # Your Challenge
 
-I would now like you to work on the following questions on your own.
+The next challenge is for you to work on the following questions on your own.
 
 ## Question 1
 
